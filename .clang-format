@@ -1,0 +1,10 @@
+---
+# Language: Cpp
+# BasedOnStyle: LLVM
+# UseTab: Never
+# IndentWidth: 4
+# TabWidth: 4
+# BreakBeforeBraces: Allman
+# AllowShortIfStatementsOnASingleLine: false
+# AllowShortLoopsOnASingleLine: false
+ColumnLimit: 1024
