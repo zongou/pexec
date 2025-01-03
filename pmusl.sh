@@ -8,7 +8,7 @@ unset LD_PRELOAD
 export PROOT_TMP_DIR="${TMPDIR}"
 
 if [ $# -gt 0 ] && [ $1 = "--help" ]; then
-	echo "Run muslc linked binaries by mounting eviroment with PRoot." >&2
+	echo "Run muslc linked binaries on Android by mounting eviroment with PRoot." >&2
 	return 0
 fi
 

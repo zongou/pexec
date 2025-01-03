@@ -92,7 +92,7 @@ int main(int argc, char *argv[]) {
   // Show help
   if (argc > 1) {
     if (strcmp("--help", argv[1]) == 0) {
-      printf("Run muslc linked binaries by mounting eviroment with PRoot.\n");
+      printf("Run muslc linked binaries on Android by mounting eviroment with PRoot.\n");
       return 0;
     }
   }
