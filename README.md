@@ -1,6 +1,6 @@
 # Introduction:
 
-Run muslc and glibc linked binaries in termux by mounting eviroment with proot.
+Run muslc and glibc linked binaries on Android by mounting eviroment with proot.
 
 ## Tested program
 
