@@ -7,6 +7,11 @@ rootfs_dir="${script_dir}/rootfs"
 unset LD_PRELOAD
 export PROOT_TMP_DIR="${TMPDIR}"
 
+if [ $# -gt 0 ] && [ $1 = "--help" ]; then
+	echo "Run muslc linked binaries by mounting eviroment with PRoot." >&2
+	return 0
+fi
+
 exec proot \
 	--change-id=1000:1000 \
 	--kill-on-exit \
