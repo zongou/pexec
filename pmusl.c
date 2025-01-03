@@ -89,6 +89,15 @@ char *my_asprintf(const char *format, ...) {
 }
 
 int main(int argc, char *argv[]) {
+  // Show help
+  if (argc > 1) {
+    if (strcmp("--help", argv[1]) == 0) {
+      printf("Run muslc linked binaries by mounting eviroment with PRoot.\n");
+      return 0;
+    }
+  }
+
+  // Get excutable file dir
   const char *original_path = argv[0];
   char path_copy[1024]; // Ensure this is large enough to hold the path
 

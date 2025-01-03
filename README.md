@@ -1,6 +1,6 @@
 # Introduction:
 
-Run muslc linked binaries by mounting eviroment with proot.
+Run muslc linked binaries by mounting eviroment with PRoot.
 
 ## Tested program
 
