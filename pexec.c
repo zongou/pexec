@@ -105,19 +105,19 @@ int main(int argc, char *argv[]) {
   strlist_addl(&proot_argv, "proot", NULL);
   strlist_addl(&proot_argv, "--change-id=1000:1000", NULL);
   strlist_addl(&proot_argv, "--kill-on-exit", NULL);
-  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/rootfs/etc/resolv.conf:/etc/resolv.conf"), NULL);
-  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/rootfs/etc/hosts:/etc/hosts"), NULL);
-  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/rootfs/etc/passwd:/etc/passwd"), NULL);
-  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/rootfs/aarch64-linux-musl:/usr/lib/aarch64-linux-musl"), NULL);
-  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/rootfs/aarch64-linux-musl/ld-musl-aarch64.so.1:/"
+  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/etc/resolv.conf:/etc/resolv.conf"), NULL);
+  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/etc/hosts:/etc/hosts"), NULL);
+  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/etc/passwd:/etc/passwd"), NULL);
+  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/aarch64-linux-musl:/usr/lib/aarch64-linux-musl"), NULL);
+  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/aarch64-linux-musl/ld-musl-aarch64.so.1:/"
                                                                              "lib/ld-musl-aarch64.so.1"),
                NULL);
-  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/rootfs/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu"), NULL);
-  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/rootfs/aarch64-linux-gnu/ld-linux-aarch64.so.1:/lib/"
+  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu"), NULL);
+  strlist_addl(&proot_argv, my_asprintf("--bind=%s%s%s%s", dir, "/", ROOTFS, "/aarch64-linux-gnu/ld-linux-aarch64.so.1:/lib/"
                                                                              "ld-linux-aarch64.so.1"),
                NULL);
   strlist_addl(&proot_argv, "--bind=/system/bin/env:/usr/bin/env", NULL);
-  strlist_addl(&proot_argv, "--bind=/system/bin/sh:/bin/sh", NULL);
+  // strlist_addl(&proot_argv, "--bind=/system/bin/sh:/bin/sh", NULL);
 
   unsetenv("LD_PRELOAD");
   for (int i = 1; i < argc; i++) {
